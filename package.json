@@ -1,0 +1,24 @@
+{
+  "name": "bt-presence",
+  "version": "1.0.0",
+  "description": "Pings 1 or more Bluetooth devices in order to detect their presence",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmvee/bt-presence.git"
+  },
+  "keywords": [
+    "bluetooth",
+    "presence",
+    "l2ping"
+  ],
+  "author": "Chris Vincent",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/cmvee/bt-presence/issues"
+  },
+  "homepage": "https://github.com/cmvee/bt-presence#readme"
+}
