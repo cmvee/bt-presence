@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/dt/bt-presence.svg)](https://www.npmjs.com/package/bt-presence)
+
 # bt-presence
 A node.js module that uses linux l2ping to detect the presence of bluetooth devices.
 
