@@ -1,15 +1,15 @@
 [![npm](https://img.shields.io/npm/dt/bt-presence.svg)](https://www.npmjs.com/package/bt-presence)
 
 # bt-presence
-A node.js module that uses linux l2ping to detect the presence of bluetooth devices.
+A node.js module that uses the Linux-based BlueZ package's `l2ping` binary to detect the _collective_ presence (or absence) of 1 or more bluetooth devices.
 
 ## Assumptions / Dependencies
 * You're running a Linux-based host
-* The [BLueZ](http://www.bluez.org) bluetooth package is installed, including the `l2ping` cmd-line tool
+* The [BlueZ](http://www.bluez.org) bluetooth package is installed, including the `l2ping` cmd-line tool
 * [node.js](nodejs.org) is installed
 
 ## Installation
-To use bt-presence in your project, run `npm install --save bt-presence`
+run `npm install --save bt-presence`
 
 ## Usage
 
