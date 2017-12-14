@@ -14,9 +14,14 @@
     "bluetooth",
     "bluez",
     "presence",
+    "absence",
     "l2ping",
     "IoT",
-    "automation"
+    "automation",
+    "scan",
+    "ping",
+    "detect",
+    "detection"
   ],
   "author": "Chris Vincent",
   "license": "Apache-2.0",
