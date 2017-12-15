@@ -1,6 +1,6 @@
 {
   "name": "bt-presence",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pings 1 or more Bluetooth devices in order to detect their presence or absence",
   "main": "index.js",
   "scripts": {

@@ -21,15 +21,20 @@ You can add addresses to scan by supplying an array of MAC addresses. The device
 
 `btPresence.addDevices(["00:12:34:56:78:90", "09:87:65:43:21:00"])`
 
+### Removing Addresses from Scan
+You can remove addresses from the scan by supplying an array of MAC addresses.
+
+`btPresence.removeDevices(["00:12:34:56:78:90", "09:87:65:43:21:00"])`
+
 ### Detecting Change: from No Devices Present to 1+ Devices Present
 Subscribe to the `'present'` event in order to know when 1 or more devices have appeared after a state where none were present prior.
 
-`btPresence.on('present', (macAddress) => console.log(`A device [${macAddress}] is now present`))`
+``btPresence.on('present', (macAddress) => console.log(`A device [${macAddress}] is now present`))``
 
 ### Detecting Change: from No Devices Present to 1+ Devices Present
 Subscribe to the `'not-present'` event in order to know when all devices are gone.
 
-`btPresence.on('not-present', (macAddress) => console.log(`All devices have disappeared`))`
+``btPresence.on('not-present', (macAddress) => console.log(`All devices have disappeared`))``
 
 ### Starting the Scan
 
