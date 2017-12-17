@@ -1,7 +1,7 @@
 {
   "name": "bt-presence",
-  "version": "1.0.3",
-  "description": "Pings 1 or more Bluetooth devices in order to detect their presence or absence",
+  "version": "1.0.4",
+  "description": "Detects collective presence or absence of a set of bluetooth devices",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

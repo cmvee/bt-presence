@@ -9,12 +9,12 @@ A node.js module that uses the Linux-based BlueZ package's `l2ping` binary to de
 * [node.js](nodejs.org) is installed
 
 ## Installation
-run `npm install --save bt-presence`
+`npm install --save bt-presence`
 
 ## Usage
 
 ### Including the package
-`const btPresence = require('btPresence')`
+`const btPresence = require('bt-presence')`
 
 ### Adding Addresses to Scan
 You can add addresses to scan by supplying an array of MAC addresses. The devices in the supplied array are concatenated to, and do not replace, any existing devices that may have already been added.
