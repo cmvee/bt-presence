@@ -54,8 +54,10 @@ class btPresence extends EventEmitter {
      * @param {array} btMacAddressArray an array of bluetooth MAC addresses to add
      */
     addDevices(btMacAddressArray) {
-        if (typeof btMacAddressArray != 'undefined')
-            this.btDevicesToPing = _.uniq(_.concat(this.btDevicesToPing, btMacAddressArray));
+        if (typeof btMacAddressArray != 'undefined'){
+            const macsLowerCase = _.map(btMacAddressArray, _.toLower);
+            this.btDevicesToPing = _.uniq( _.concat(this.btDevicesToPing, macsLowerCase) );
+        }
     }
 
     /**
@@ -63,8 +65,21 @@ class btPresence extends EventEmitter {
      * @param {array} btMacAddressArray an array of bluetooth MAC addresses to remove
      */
     removeDevices(btMacAddressArray) {
-        if (typeof btMacAddressArray != 'undefined')
-            this.btDevicesToPing = _.uniq(_.pullAll(this.btDevicesToPing, btMacAddressArray));
+        if (typeof btMacAddressArray != 'undefined'){
+            const macsLowerCase = _.map(btMacAddressArray, _.toLower);
+            this.btDevicesToPing = _.uniq( _.pullAll(this.btDevicesToPing, macsLowerCase) );
+        }
+    }
+
+    /**
+     * Replaces list of MAC addresses of devices whose presence we want to detect
+     * @param {array} btMacAddressArray an array of bluetooth MAC addresses to detect
+     */
+    setDevices(btMacAddressArray) {
+        if (typeof btMacAddressArray != 'undefined'){
+            const macsLowerCase = _.map(btMacAddressArray, _.toLower);
+            this.btDevicesToPing = _.uniq(macsLowerCase);
+        }
     }
 
     /**

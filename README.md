@@ -26,6 +26,11 @@ You can remove addresses from the scan by supplying an array of MAC addresses.
 
 `btPresence.removeDevices(["00:12:34:56:78:90", "09:87:65:43:21:00"])`
 
+### Setting/Replacing List of Addresses to Scan
+You can replace the entire list of addresses to scan by supplying an array of MAC addresses.
+
+`btPresence.setDevices(["00:12:34:56:78:90", "09:87:65:43:21:00"])`
+
 ### Detecting Change: from No Devices Present to 1+ Devices Present
 Subscribe to the `'present'` event in order to know when 1 or more devices have appeared after a state where none were present prior.
 
