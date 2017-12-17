@@ -64,7 +64,7 @@ class btPresence extends EventEmitter {
      */
     removeDevices(btMacAddressArray) {
         if (typeof btMacAddressArray != 'undefined')
-            this.btDevicesToPing = _.uniq(_.pullAll(this.btMacAddressesToPing, btMacAddress));
+            this.btDevicesToPing = _.uniq(_.pullAll(this.btDevicesToPing, btMacAddressArray));
     }
 
     /**
