@@ -150,7 +150,7 @@ class btPresence extends EventEmitter {
             if (callback) callback({ address: macAddress, isPresent: true });
         });
     
-        // l2ping writes to stderr if the device is found
+        // l2ping writes to stderr if the device is NOT found
         process.stderr.on('data', () => {
             if (callback) callback({ address: macAddress, isPresent: false });
         });
