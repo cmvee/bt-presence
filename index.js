@@ -23,6 +23,9 @@ class btPresence extends EventEmitter {
 
         // holds the timer for the next scan, mainly so we can clear it if asked to stop
         this.nextScanTimer = undefined;
+
+        // send the first result after start
+        this.sendFirstResult = true;
     }
 
     /**
@@ -115,7 +118,13 @@ class btPresence extends EventEmitter {
      * This verifies that l2ping is available and then starts the continuous scan.
      * NOTE: This function should be called by external code in order to start scans.
      */
-    start() {
+    start(sendFirst) {
+
+        if (typeof sendFirst != undefined) {
+          this.sendFirstResult = sendFirst;
+        }
+
+        //console.log(`[${new Date()}] Start BT devices to ping`);
         if (this.isL2PingAvailable){
             this.scanForAllDevices().bind(this);
         } else {
@@ -173,14 +182,16 @@ class btPresence extends EventEmitter {
 
         // detect changes in presence and emit events if necessary
         if (this.btDevicesPresent.length > 0){
-            if (!devicesPresentAtLastCheck){
+            if (!devicesPresentAtLastCheck || this.sendFirstResult){
                 this.emit('present', result.address);
             }
         } else {
-            if (devicesPresentAtLastCheck){
+            if (devicesPresentAtLastCheck || this.sendFirstResult){
                 this.emit('not-present', result.address);
             }
         }
+
+        this.sendFirstResult = false;
     }
 }
 
