@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "declaration": true,  // ensures that the compiler generates the respective TypeScript definitions files
+    "outDir": "./dist",  // transpiled javascript is output here
+    "strict": true
+  }
+}
