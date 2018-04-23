@@ -1,4 +1,5 @@
 [![npm](https://img.shields.io/npm/dt/bt-presence.svg)](https://www.npmjs.com/package/bt-presence)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcmvee%2Fbt-presence.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcmvee%2Fbt-presence?ref=badge_shield)
 
 <a href="https://www.buymeacoffee.com/cmvee"><img src="https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" target="_blank"></a>
 
@@ -97,3 +98,7 @@ The project is now developed in TypeScript. To modify the code for your own use:
 2. Edit the `.ts` files in the `src` directory
 3. `npm run build` to transpile the TypeScript `.ts` source files into Javascript
 4. Look in the `dist` directory for the fresh Javascript files
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcmvee%2Fbt-presence.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcmvee%2Fbt-presence?ref=badge_large)
