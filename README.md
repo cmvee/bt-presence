@@ -72,6 +72,17 @@ Subscribe to the `'not-present'` event in order to know when all devices are gon
 
 ``btp.on('not-present', (macAddress) => console.log(`All devices have disappeared`))``
 
+### Report Result of Every Ping
+Subscribe to the `'ping-result'` event in order to get result of every ping as an object (address , IsPresent).
+
+    btp.on('ping-result', (res) => {
+        const msg = {
+            topic: "presence/" + res.address,
+            payload: res.isPresent
+        };
+        node.send(msg)
+    });
+
 ### Starting the Scan
 This starts the scan. By default, the first positive or negative reponse from any device in a newly started scan will be emitted as a change. To disable this, call `btp.start(false)`.
 

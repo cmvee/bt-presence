@@ -1,6 +1,6 @@
 {
   "name": "bt-presence",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Detects collective presence or absence of a set of bluetooth devices",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
