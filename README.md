@@ -106,9 +106,10 @@ Returns the number of seconds between scans
 The project is now developed in TypeScript. To modify the code for your own use:
 
 1. Clone the repo with `git clone https://github.com/cmvee/bt-presence.git`
-2. Edit the `.ts` files in the `src` directory
-3. `npm run build` to transpile the TypeScript `.ts` source files into Javascript
-4. Look in the `dist` directory for the fresh Javascript files
+2. In the `bt-presence` folder, use command `npm install` (this creates required `node-modules` files for building later)
+3. Edit the `.ts` files in the `src` directory
+4. `npm run build` to transpile the TypeScript `.ts` source files into Javascript
+5. Look in the `dist` directory for the fresh Javascript files.  These can be copied to the normal working directory to test.
 
 
 ## License
