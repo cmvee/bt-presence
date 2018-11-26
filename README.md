@@ -72,6 +72,17 @@ Subscribe to the `'not-present'` event in order to know when all devices are gon
 
 ``btp.on('not-present', (macAddress) => console.log(`All devices have disappeared`))``
 
+### Report Result of Every Ping
+Subscribe to the `'ping-result'` event in order to get result of every ping as an object (address , IsPresent).
+
+    btp.on('ping-result', (res) => {
+        const msg = {
+            topic: "presence/" + res.address,
+            payload: res.isPresent
+        };
+        node.send(msg)
+    });
+
 ### Starting the Scan
 This starts the scan. By default, the first positive or negative reponse from any device in a newly started scan will be emitted as a change. To disable this, call `btp.start(false)`.
 
@@ -95,9 +106,10 @@ Returns the number of seconds between scans
 The project is now developed in TypeScript. To modify the code for your own use:
 
 1. Clone the repo with `git clone https://github.com/cmvee/bt-presence.git`
-2. Edit the `.ts` files in the `src` directory
-3. `npm run build` to transpile the TypeScript `.ts` source files into Javascript
-4. Look in the `dist` directory for the fresh Javascript files
+2. In the `bt-presence` folder, use command `npm install` (this creates required `node-modules` files for building later)
+3. Edit the `.ts` files in the `src` directory
+4. `npm run build` to transpile the TypeScript `.ts` source files into Javascript
+5. Look in the `dist` directory for the fresh Javascript files.  These can be copied to the normal working directory to test.
 
 
 ## License

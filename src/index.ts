@@ -244,6 +244,8 @@ class btPresence extends EventEmitter {
         // save whether any devices were present prior to this ping result
         const devicesPresentAtLastCheck = this.btDevicesPresent.length > 0;
 
+        this.emit('ping-result', result);
+
         // update the device presence list based on the result of the ping
         if (result.isPresent){
             this.btDevicesPresent = _.uniq(_.concat(this.btDevicesPresent, result.address));
